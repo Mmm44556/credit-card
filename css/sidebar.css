@@ -1,0 +1,32 @@
+.sidebar {
+  h1 {
+    text-align: center;
+    border-bottom: 1px solid;
+    margin-bottom: 1cqw;
+  }
+
+  ul {
+    li {
+      display: flex;
+      height: 4.5cqw;
+      align-items: center;
+      padding-left: 5cqw;
+      font-size: 1.5cqw;
+      font-weight: normal !important;
+      transition: all .5s ease-out;
+      cursor: pointer;
+      background-color: whitesmoke;
+
+      &:hover {
+        padding-left: 10cqw;
+        background-color: hsl(279, 6%, 55%);
+      }
+    }
+
+    .active {
+      padding-left: 10cqw;
+      background-color: hsl(279, 6%, 55%);
+
+    }
+  }
+}

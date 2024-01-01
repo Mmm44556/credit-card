@@ -1,0 +1,10 @@
+.container {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 25% 2fr;
+
+  @media screen and (max-width:992px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,199 @@
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-sidebar {
+  background-image: url('../images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media screen and (max-width:992px) {
+    height: 25dvh;
+    background-image: url('../images/bg-main-mobile.png');
+  }
+}
+
+.card {
+  width: 25cqw;
+  height: 15cqw;
+  color: #fff;
+  cursor: pointer;
+  perspective: 1000px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+
+  @media screen and (max-width:992px) {
+    width: 40cqw;
+    height: 25cqw;
+    top: 75%;
+  }
+
+  @media screen and (max-width:768px) {
+    width: 45cqw;
+    height: 30cqw;
+  }
+
+  @media screen and (max-width:576px) {
+    width: 55cqw;
+    height: 35cqw;
+    left: 45%;
+  }
+
+  @media screen and (width<=375px) {
+    left: 40%;
+  }
+
+
+
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+
+
+.map-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.card-body {
+  & span:first-child {
+    flex-grow: 3;
+    font-size: 2.5cqw;
+  }
+}
+
+.card-footer {
+  div {
+    height: fit-content;
+    display: block !important;
+
+    p {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+
+    & p:first-child {
+      font-size: 0.6rem;
+    }
+
+  }
+
+
+}
+
+
+.card:hover .card-inner {
+  transform: rotateY(-180deg);
+
+
+}
+
+
+.front {
+  display: grid;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.front,
+.back {
+  font-weight: normal !important;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 1;
+  backface-visibility: hidden;
+
+
+  .card-chip,
+  .card-visa {
+    height: 2.5cqw;
+  }
+}
+
+.back {
+  transform: rotateY(180deg);
+  position: relative;
+  display: grid;
+
+  .bar {
+    height: 3cqw;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 15px;
+    background-color: #222;
+  }
+
+  .card-cvc {
+    margin-top: 3.5cqw;
+    display: flex;
+
+    img {
+      width: 85%;
+    }
+
+
+    p {
+      background-color: #fff;
+      color: #000;
+      width: 15%;
+      text-align: center;
+      text-wrap: nowrap;
+      font-size: 2.5cqw;
+      padding: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width:992px) {
+      margin-top: 2.5rem;
+    }
+
+    @media screen and (width<=375px) {
+      margin-top: 1.3rem;
+      height: 3cqh;
+    }
+  }
+
+  .card-text {
+    margin-top: 15px;
+
+  }
+
+  .signature {
+    display: flex;
+    text-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

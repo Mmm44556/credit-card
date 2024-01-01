@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Credit cards</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'DM Serif Display', serif;
+      /* font-weight: 600; */
+
+
+    }
+
+    html {
+      height: 100dvh;
+      max-height: 100dvh;
+      background-color: #efefef;
+
+    }
+  </style>
+  <link rel="stylesheet" href="./css/wrapper.css">
+  <link rel="stylesheet" href="./css/container.css">
+  <link rel="stylesheet" href="./css/form.css">
+  <link rel="stylesheet" href="./css/card.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <h1>THEME</h1>
+      <ul class="switch">
+        <li class="active">Default</li>
+        <li>Dark</li>
+        <li>Light</li>
+        <li>Light City</li>
+      </ul>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="card-sidebar default">
+        <div class="card">
+          <div class="card-inner">
+
+            <div class="front">
+              <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+              <div class="card-header">
+                <span id="card-name">卡片名稱</span>
+                <img src="https://i.ibb.co/WHZ3nRJ/visa.png" alt="visa" srcset="" class="card-visa">
+              </div>
+              <div class="card-body">
+                <span id="card-number">
+                  **** **** ****
+                </span>
+                <img src="https://i.ibb.co/G9pDnYJ/chip.png" alt="chip" srcset="" class="card-chip">
+              </div>
+
+              <div class="card-footer">
+                <div>
+                  <p>
+                    cardholder
+                  </p>
+                  <p id="card-holder">
+                    XXX
+                  </p>
+
+                </div>
+
+                <div>
+                  <p>
+                    Expire
+                  </p>
+                  <p id="card-expires">
+                    <span id="card-month">
+                      00
+                    </span>
+                    /
+                    <span id="card-year">00</span>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="back">
+              <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+              <div class="bar"></div>
+              <div class="card-cvc">
+                <img src="https://i.ibb.co/S6JG8px/pattern.png">
+
+                <p>
+                  <span id="card-cvc">
+                    ---
+                  </span>
+                </p>
+              </div>
+              <div class="card-text">
+                <p>this is a virtual card.</p>
+              </div>
+              <div class="signature">
+                <p>SIGNATURE</p>
+                <img src="https://i.ibb.co/WHZ3nRJ/visa.png" class="card-visa">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="card-content">
+        <form class="card-form" id="card-form">
+          <label for="card-form-name">
+            CARD NAME
+            <input type="text" maxlength="15" minlength="3" name="card-form-name" required id="card-form-name"
+              placeholder="卡片名稱">
+            <p></p>
+          </label>
+          <label for="card-form-holder">
+            CARDHOLDER NAME
+            <input type="text" name="card-form-holder" required maxlength="15" minlength="3" id="card-form-holder"
+              placeholder="持有人">
+            <p></p>
+          </label>
+          <label for="card-form-number">
+            CARD NUMBER
+            <input type="text" name="card-form-number" maxlength="12" minlength="12" required id="card-form-number"
+              placeholder="信用卡卡號">
+            <p></p>
+          </label>
+
+          <div>
+
+            <label for="card-form-month" style="text-wrap: nowrap;">
+              EXP. DATE (MM/YY)
+              <div>
+                <input type="text" required name="card-form-month" id="card-form-month" maxlength="2" minlength="2"
+                  placeholder="MM">
+
+                <input type="text" required name="card-form-year" maxlength="2" minlength="2" id="card-form-year"
+                  placeholder="YY">
+              </div>
+
+            </label>
+            <label for="card-form-cvc">
+              CVC
+              <input type="text" required name="card-form-cvc" id="card-form-cvc" placeholder="安全碼" maxlength="3"
+                minlength="3">
+              <p></p>
+            </label>
+
+          </div>
+
+          <input type="submit" value="確認資料" style="cursor: pointer;">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/form.js"></script>
+<script src="./js/modifier.js"></script>
+<script src="./js/switch.js"></script>
+
+
+</html>
+
+<!-- 0000 0000 0000 0000
+Jane Appleseed
+00/00
+
+000
+
+
+e.g. Jane Appleseed
+
+
+e.g. 1234 5678 9123 0000
+
+
+MM
+YY
+
+
+e.g. 123
+
+Confirm
+
+ Completed state start -->
+<!-- 
+Thank you!
+We've added your card details
+Continue -->
