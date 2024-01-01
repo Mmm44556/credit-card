@@ -3,7 +3,7 @@ const theme = {
   'DEFAULT': '',
   'DARK': 'linear-gradient(90deg, #212121, #000)',
   'LIGHT': 'linear-gradient(to left, #ece9e6, #ffffff)',
-  'LIGHT CITY': `url(${base}bg-light-city.jpg)`
+  'LIGHT CITY': `url(${base}/images/bg-light-city.jpg)`
 }
 
 
