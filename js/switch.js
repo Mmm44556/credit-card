@@ -1,4 +1,5 @@
 const base = new URL(window.location).href.replace('/index.html', '/images');
+console.log(base);
 const theme = {
   'DEFAULT': '',
   'DARK': 'linear-gradient(90deg, #212121, #000)',
