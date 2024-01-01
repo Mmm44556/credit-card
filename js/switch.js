@@ -1,10 +1,10 @@
-const base = new URL(window.location).href.replace('/index.html', '/images');
+const base = new URL(window.location);
 console.log(base);
 const theme = {
   'DEFAULT': '',
   'DARK': 'linear-gradient(90deg, #212121, #000)',
   'LIGHT': 'linear-gradient(to left, #ece9e6, #ffffff)',
-  'LIGHT CITY': `url(${base}/images/bg-light-city.jpg)`
+  'LIGHT CITY': `url(./images/bg-light-city.jpg)`
 }
 
 
